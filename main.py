@@ -1,3 +1,4 @@
+#Import Modules
 import os
 import time
 import playsound
@@ -6,13 +7,15 @@ from gtts import gTTS
 
 
 class HearAndTell:
-
+    
+    # Speaking function
     def tell(self, text):
         tts = gTTS(text=text, lang="en")
         filename = "voice.mp3"
         tts.save(filename)
         playsound.playsound(filename)
 
+     # Hearing our audio function
     def hear(self):
         recog = sr.Recognizer()
         with sr.Microphone() as source:
