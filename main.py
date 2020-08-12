@@ -28,7 +28,7 @@ class HearAndTell:
         return said
 
 
-do = HearAndTell
+do = HearAndTell()
 
 text = do.hear()
 
